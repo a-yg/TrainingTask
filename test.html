@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="star"></div>
+</body>
+
+</html>
+
+<script>
+  let star = document.getElementById('star')
+  let result = ""
+
+  for (let a = 1; a <= 9; a++) {
+    result += '<div>' + '【' + a + 'の段】' + '<br/>'
+    for (let b = 1; b <= 9; b++) {
+      result += a + "×" + b + "=" + (a * b) + '<br/>'
+    }
+    result += '</div>'
+  }
+
+  // for (let a = 1; a <= 10 ; a++) {
+  //   for (let b = 0; b < a * 3 ; b++) {
+  //     result += '<span>*</span>'
+  //   }
+  //   result += '<br/>'
+  // }
+  // ***
+  // ******
+  // *********
+  // ************
+  // ***************
+
+
+  // for (let a = 5; a >= 0; a--) {
+  //   for (let b = 0; b < a; b++) {
+  //     result += '<span>*</span>'
+  //   }
+  //   result += '<br/>'
+  // }
+  // *****
+  // ****
+  // ***
+  // **
+  // *
+
+  // for (let a = 0; a <= 5; a++) {
+  //   for (let b =0; b < a; b++) {
+  //     result += '<span>*</span>'
+  //   }
+  //   result += '<br/>'
+  // }
+  //  *
+  //  **
+  //  ***
+  //  ****
+  //  *****
+
+  star.innerHTML = result
+
+</script>
+
+<style>
+  #star {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 0;
+    font-size: 20px;
+  }
+
+  div>div {
+    /* display: flex;
+    justify-content: space-between; */
+    margin: 0;
+    padding: 20px;
+    background-color: pink;
+    border: solid;
+  }
+</style>
